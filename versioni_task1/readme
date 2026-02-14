@@ -1,24 +1,35 @@
 Versione Finale:
 
-- 
+1) task1-db1-resnet.ipynb
 
--
+Performance:
 
+- Test Set Accuracy: 0.8880 (88.80%)
+
+- Test Set Macro F1: 0.8837
+
+- Training complete in 57m 41s
+
+- best val_loss at epoch 40: 1.337468
+
+2) task1-db2-resnet.ipynb
+
+Performance:
+
+- Test Set Accuracy: 0.9020 (90.20%)
+
+- Test Set Macro F1: 0.9000
+
+- Training complete in 74m 28s
+
+- best val_loss at epoch 43: 1.292091
+
+***
 
 Versioni Scartate:
 
--
+3&4) task1-db1-se-resnet.ipynb e task1-db2-se-resnet.ipynb
 
--
+5&6) task1-db1-effiecientnetb0.ipynb e task1-db2-effiecientnetb0.ipynb
 
--
-
--
-
--
-
--
-
--
-
--
+7&8) task1-db1-dp-se-resnet2.ipynb e task1-db2-dp-se-resnet2.ipynb
