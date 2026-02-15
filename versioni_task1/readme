@@ -4,25 +4,25 @@ Versione Finale:
 
 Performance:
 
-- Test Set Accuracy: 0.8880 (88.80%)
+- Test Set Accuracy: 
 
-- Test Set Macro F1: 0.8837
+- Test Set Macro F1: 
 
-- Training complete in 57m 41s
+- Training complete in 
 
-- best val_loss at epoch 40: 1.337468
+- best val_loss at epoch 
 
 2) task1-db2-resnet.ipynb
 
 Performance:
 
-- Test Set Accuracy: 0.9020 (90.20%)
+- Test Set Accuracy: 
 
-- Test Set Macro F1: 0.9000
+- Test Set Macro F1: 
 
-- Training complete in 74m 28s
+- Training complete in 
 
-- best val_loss at epoch 43: 1.292091
+- best val_loss at epoch 
 
 ***
 
