@@ -1,0 +1,6 @@
+Questa cartella contiene esclusivamente i file relativi alle configurazioni di preprocessing che sono state scartate.
+
+Sono inoltre presenti due file contenenti un modello ResNet18 addestrato con pesi pre-addestrati scaricati da:
+https://www.kaggle.com/models/npri678/resnet18-f37072fd-pth/PyTorch/default/1
+
+Le prestazioni ottenute erano ottime; tuttavia, questa versione è stata scartata in quanto non conforme al requisito del progetto che prevedeva di non utilizzare pesi pre-addestrati.
