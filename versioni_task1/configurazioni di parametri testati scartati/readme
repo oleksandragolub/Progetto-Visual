@@ -5,6 +5,54 @@ https://www.kaggle.com/models/npri678/resnet18-f37072fd-pth/PyTorch/default/1
 
 Le prestazioni ottenute erano ottime; tuttavia, questa versione è stata scartata in quanto non conforme al requisito del progetto che prevedeva di non utilizzare pesi pre-addestrati.
 
+Nota: nei file di questa cartella non era ancora impostata la seed.
+
+***
+
+- file "progetto-visual-dataset-1-base.ipynb"
+- test su db "visual_exam_dataset"
+
+Test samples found: 500
+Classes found: 100
+Running evaluation on Test set...
+------------------------------
+Test Set Accuracy:   0.7420 (74.20%)
+Test Set Macro F1:   0.7270
+------------------------------
+(0.742, 0.7269697802197801)
+
+***
+
+- file "progetto-visual-dataset-2-base.ipynb"
+- test su db "visual_exam_dataset_2"
+
+Test samples found: 500
+Classes found: 100
+Running evaluation on Test set...
+------------------------------
+Test Set Accuracy:   0.8220 (82.20%)
+Test Set Macro F1:   0.8179
+------------------------------
+(0.822, 0.8179378954378953)
+
+***
+
+- file "progetto-visual-dataset-1-con-pesi.ipynb"
+- test su db "visual_exam_dataset"
+
+Test samples found: 500
+Classes found: 100
+Running evaluation on Test set...
+------------------------------
+Test Set Accuracy:   0.9280 (92.80%)
+Test Set Macro F1:   0.9253
+------------------------------
+(0.928, 0.9252980352980353)
+
+***
+
+- file "progetto-visual-dataset-2-con-pesi.ipynb"
+- test su db "visual_exam_dataset_2"
 
 Test samples found: 500
 Classes found: 100
@@ -14,3 +62,5 @@ Test Set Accuracy:   0.9360 (93.60%)
 Test Set Macro F1:   0.9347
 ------------------------------
 (0.936, 0.9346742701742702)
+
+***
