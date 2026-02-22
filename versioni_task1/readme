@@ -1,35 +1,39 @@
-Versione Finale:
-
-1) task1-db1-resnet.ipynb
-
-Performance:
-
-- Test Set Accuracy: 
-
-- Test Set Macro F1: 
-
-- Training complete in 
-
-- best val_loss at epoch 
-
-2) task1-db2-resnet.ipynb
-
-Performance:
-
-- Test Set Accuracy: 
-
-- Test Set Macro F1: 
-
-- Training complete in 
-
-- best val_loss at epoch 
+Descrizione delle cartelle e dei file:
 
 ***
 
-Versioni Scartate:
+- cartella "versioni_scartate"
 
-3&4) task1-db1-se-resnet.ipynb e task1-db2-se-resnet.ipynb
+Contiene versioni precedenti del codice con configurazioni di parametri che sono state testate ma successivamente scartate. Si tratta di esperimenti preliminari non inclusi nei risultati finali.
 
-5&6) task1-db1-effiecientnetb0.ipynb e task1-db2-effiecientnetb0.ipynb
+***
 
-7&8) task1-db1-dp-se-resnet2.ipynb e task1-db2-dp-se-resnet2.ipynb
+- cartella "senza seed"
+
+Contiene versioni dei modelli con le stesse configurazioni presenti nella cartella "con seed", ma senza fissare la random seed. Di conseguenza:
+- i risultati non sono perfettamente riproducibili;
+- le metriche possono variare tra esecuzioni diverse.
+Questi file rappresentano esperimenti preliminari prima dell’introduzione della riproducibilità.
+
+***
+
+- cartella "con seed"
+
+Contiene i modelli finali utilizzati per il confronto nel Task 1. In questa cartella:
+- la random seed è fissata per garantire riproducibilità;
+- le configurazioni di preprocessing e data augmentation sono mantenute costanti;
+- varia esclusivamente l’architettura del modello (ResNet, EfficientNet, due varianti SE-Resnet).
+Questa è la cartella di riferimento per i risultati ufficiali, visti nella presentazione.
+
+
+***
+
+- file "metriche-task1.pdf"
+
+File riepilogativo contenente le metriche calcolate per ciascun modello presente nella cartella "con seed".
+Per ogni modello vengono riportate:
+- Accuracy
+- Precision (macro)
+- Recall (macro)
+- Macro F1-score
+Il documento fornisce una sintesi comparativa delle performance.
