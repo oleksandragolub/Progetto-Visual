@@ -1,5 +1,5 @@
 Questa applicazione permette di eseguire la classificazione di immagini sportive per:
-- Task 1 – CNN (ResNet / SE-ResNet)
+- Task 1 – CNN (ResNet)
 - Task 2 – CNN con test degradato
 - Task 3 – SP-HOG + SP-LBP + PCA + Logistic Regression
 
