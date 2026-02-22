@@ -1,23 +1,41 @@
-Versione Finale:
+Descrizione delle cartelle e dei file:
 
--
+***
 
--
+- file "baseLine.ipynb"
 
-Versioni Scartate:
+Notebook contenente il modello di baseline (di riferimento). In questo script:
+- il modello viene valutato direttamente sulla cartella del test set degradato (test_degradato);
+- serve a stabilire le performance di partenza (calcolando accuracy, precision, recall, e F1-score) prima dell'applicazione di tecniche più avanzate di risoluzione del problema. 
 
--
+***
 
--
+- file "denoising.ipynb"
 
--
+Contiene la pipeline di denoising "blind", ovvero che non necessita di immagini pulite di ground truth per funzionare. Questo file:
+- prende in input la cartella delle immagini degradate e genera una nuova struttura di cartelle con le immagini "denoisate" (ripulite dal rumore);
+- calcola le metriche di qualità visiva delle immagini generate, nello specifico PSNR (Peak Signal-to-Noise Ratio) e SSIM (Structural Similarity Index Measure).
 
--
+***
 
--
+- file "finetuned-task2-model-onlyaugmentation_cleanTestSet.ipynb"
 
--
+Script per la valutazione di un modello fine-tunato per il Task 2, addestrato utilizzando tecniche di data augmentation. In questo caso specifico:
+- il modello viene testato sul test set pulito (senza degradazioni);
+- permette di osservare le performance ottimali del modello in assenza di rumore, utile per confronti con i risultati sui dati degradati e verificare che il modello a seguito del fineTuning non abbia smesso di saper classificare correttamente anche immagini pulite.
 
--
+***
 
--
+- file "finetuned-task2-model-onlyaugmentation_testSetDegradato.ipynb"
+
+Contiene la valutazione dello stesso modello fine-tunato con data augmentation per il Task 2, ma questa volta applicato direttamente al test set degradato. Nello script:
+- vengono riportate le metriche classiche (Accuracy, Precision, Recall, F1-Score);
+- viene effettuata una comparazione dei risultati sia senza che con l'utilizzo della tecnica TTA (Test Time Augmentation) in fase di inferenza.
+
+***
+
+- file "finetuned-task2-model-augmentation_Denoising.ipynb"
+
+Rappresenta lo step finale o combinato per il Task 2. Il notebook testa il modello fine-tunato con augmentation direttamente sulle immagini che sono state precedentemente "pulite" dalla pipeline di denoising. Anche qui:
+- vengono misurate e stampate tutte le metriche (sia Macro che Weighted average);
+- i risultati vengono riportati mostrando chiaramente il confronto tra l'inferenza standard e l'inferenza con TTA (Test Time Augmentation).
