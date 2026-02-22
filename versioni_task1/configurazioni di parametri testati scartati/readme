@@ -5,7 +5,9 @@ https://www.kaggle.com/models/npri678/resnet18-f37072fd-pth/PyTorch/default/1
 
 Le prestazioni ottenute erano ottime; tuttavia, questa versione è stata scartata in quanto non conforme al requisito del progetto che prevedeva di non utilizzare pesi pre-addestrati.
 
+
 Nota: nei file di questa cartella non era ancora impostata la seed.
+
 
 ***
 
@@ -35,6 +37,7 @@ Test Set Macro F1:   0.8179
 ------------------------------
 (0.822, 0.8179378954378953)
 
+
 ***
 
 - file "progetto-visual-dataset-1-con-pesi.ipynb"
@@ -48,6 +51,7 @@ Test Set Accuracy:   0.9280 (92.80%)
 Test Set Macro F1:   0.9253
 ------------------------------
 (0.928, 0.9252980352980353)
+
 
 ***
 
