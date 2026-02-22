@@ -1,1 +1,45 @@
-...
+Questa applicazione permette di eseguire la classificazione di immagini sportive per:
+- Task 1 – CNN (ResNet / SE-ResNet)
+- Task 2 – CNN con test degradato
+- Task 3 – SP-HOG + SP-LBP + PCA + Logistic Regression
+
+L'app è sviluppata con Streamlit e utilizza:
+- PyTorch (.pth) per Task1 e Task2
+- Scikit-learn (.joblib) per Task3
+
+***
+
+Installazione:
+
+Aprire PowerShell nella cartella del progetto ed eseguire:
+- python -m pip install streamlit torch torchvision pillow numpy scikit-learn scikit-image joblib
+
+Avvio dell'app:
+- python -m streamlit run app.py
+
+Dopo aver inserito l'email si aprirà automaticamente il browser all’indirizzo:
+- http://localhost:8501
+
+***
+
+Configurazione percorsi:
+
+Se i file si trovano in una posizione diversa, modificare in app.py le seguenti variabili:
+
+- SPORTS_CSV = r"F:\psd\file visual\task1\Nuova cartella\Nuova cartella\app\sports_labels.csv"
+
+- TASK1_PTH = r"F:\psd\file visual\task1\Nuova cartella\Nuova cartella\app\best_model_for_task1-db2-resnet-with-seed.pth"
+
+- TASK2_PTH = r"F:\psd\file visual\task1\Nuova cartella\Nuova cartella\app\best_model_task2_denoiseTestSet.pth"
+
+- TASK3_JOBLIB = r"F:\psd\file visual\task1\Nuova cartella\Nuova cartella\app\best_model_task3_SPHOG_1x1_2x2_SPLBP_1x1_2x2__PCA480_C8_lbfgs.joblib"
+
+***
+
+Utilizzo:
+
+- Selezionare il Task desiderato dal menu a tendina
+
+- Caricare un'immagine sportiva
+
+- Visualizzare: classe predetta con top-5 probabilità
