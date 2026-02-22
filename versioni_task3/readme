@@ -1,23 +1,76 @@
-Versione Finale:
+Questa cartella contiene esclusivamente le diverse versioni del codice sviluppate durante il Task 3.
 
--
+Ogni file rappresenta una configurazione sperimentale testata nel processo di miglioramento progressivo del modello, a partire dalla baseline iniziale fino alla versione finale.
 
--
+*********
 
-Versioni Scartate:
+Struttura delle versioni:
 
--
+- task3-db1-versione1-baseline.ipynb 
 
--
+Versione iniziale di riferimento (baseline).
 
--
+***
 
--
+- da task3-db1-versione2.ipynb a task3-db1-versione11.ipynb
 
--
+Versioni intermedie contenenti modifiche progressive a:
+- configurazioni di preprocessing
+- data augmentation
+- architettura o parametri del modello
+- strategie di training
+Ogni notebook rappresenta un esperimento incrementale rispetto alla versione precedente.
 
--
+***
 
--
+- task3-db1-versione12-finale.ipynb
 
--
+Versione finale selezionata sulla base delle migliori performance ottenute.
+
+***
+
+- task3-db1-versione12-finale-con-augmentation_ma_perf_peggiorati.ipynb
+
+Variante della versione finale con una diversa configurazione di data augmentation che ha però prodotto performance inferiori.
+È stata mantenuta per documentare il processo sperimentale.
+
+*********
+
+Confronto delle performance: Baseline vs Modello Finale
+
+Per "baseline" sono state testate feature classiche senza riduzione dimensionale (NO-PCA) e classificate con LinearSVC:
+- HOG
+- LBP
+- HOG + LBP
+
+Le dimensionalità risultanti sono:
+- HOG: 8100 feature
+- LBP: 10 feature
+- HOG + LBP: 8110 feature
+
+Le performance ottenute sono molto basse (massima accuracy circa 9–10%), evidenziando una capacità discriminativa limitata con questa configurazione. 
+
+Il miglior risultato e' stato ottenuto per HOG + LBP, percio' nelle versioni successive si testavano altri varianti della loro somma, fino ad ottenere un significativo miglioramento nella versione finale, dove è stata introdotta una pipeline più strutturata:
+
+- SP-HOG + SP-LBP
+- PCA (riduzione da 5610 a 480 feature)
+- Logistic Regression
+- Test di diversi solver e regularization (C=8, C=10)
+- Test con e senza class weight balanced
+
+La migliore configurazione è risultata:
+- Solver: lbfgs
+- Regularization: C = 8
+- Class weight: None
+- Accuracy: 20.60%
+- Macro-F1: 19.70%
+
+Osservazioni:
+- L’introduzione di Spatial Pyramid (SP) migliora significativamente la capacità rappresentativa delle feature.
+- La riduzione dimensionale con PCA consente una rappresentazione più compatta e stabile.
+- Il passaggio da LinearSVC a Logistic Regression migliora la stabilità del training.
+- L’uso di class_weight=balanced non porta benefici significativi in questo caso.
+
+Conclusione:
+Il modello finale mostra un miglioramento sostanziale rispetto alla baseline (circa +10% in accuracy), dimostrando l’efficacia della combinazione:
+- SP features + PCA + Logistic Regression
